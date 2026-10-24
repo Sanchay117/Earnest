@@ -1,0 +1,13 @@
+node_modules/
+.secrets/
+.env
+.env.*
+!.env.example
+logs/
+dist/
+**/contracts/out/
+**/contracts/cache/
+**/contracts/broadcast/
+.arc-studio/
+.compass/
+.DS_Store

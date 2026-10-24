@@ -1,0 +1,14 @@
+{
+  "testnet": {
+    "earnest": "0x125e29bcc055d87fdaa6710c0b1596389bee781a",
+    "treasury": "0xC67d319fBd2b8b59B387601E7622F9507eea81D6",
+    "deployBlock": "68810043",
+    "agentId": "897441"
+  },
+  "mainnet": {
+    "earnest": "0xea257f34207afd7c1dd16ea64764dbdc6ee7abc3",
+    "treasury": "0xbe3173ad0d432e541B9153A3158bc7b9721E10a6",
+    "deployBlock": "27640516",
+    "agentId": "2730"
+  }
+}
