@@ -32,7 +32,8 @@ export type EvidenceEntry = {
   at: string;
 };
 
-export function record(network: NetworkName, step: string, outcome: string, r: TransactionReceipt) {
+// `at` defaults to now; pass the block time when recording a transaction after the fact.
+export function record(network: NetworkName, step: string, outcome: string, r: TransactionReceipt, at?: string) {
   mkdirSync(`${ROOT}evidence`, { recursive: true });
   const path = `${ROOT}evidence/${network}.json`;
   const log: EvidenceEntry[] = existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : [];
@@ -46,9 +47,11 @@ export function record(network: NetworkName, step: string, outcome: string, r: T
     block: r.blockNumber.toString(),
     gasUsed: r.gasUsed.toString(),
     costUsdc: (Number(costWei) / 1e18).toFixed(6),
-    at: new Date().toISOString(),
+    at: at ?? new Date().toISOString(),
   };
   log.push(entry);
+  // Keep the log in chain order, so transactions recorded after the fact land where they happened.
+  log.sort((a, b) => Number(BigInt(a.block) - BigInt(b.block)));
   writeFileSync(path, JSON.stringify(log, null, 2) + "\n");
   console.log(`  ${step}: ${entry.outcome}\n    ${entry.link} (gas ${entry.gasUsed}, $${entry.costUsdc})`);
   return entry;

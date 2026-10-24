@@ -233,7 +233,7 @@ export function HirePage({ network, networkKey }: Props) {
 
             <Field label="Budget (USDC)">
               <input
-                type="number" value={budgetUsdc} min="0.000001" step="0.01"
+                type="number" value={budgetUsdc} min="0.01" step="0.01"
                 onChange={(e) => setBudgetUsdc(e.target.value)}
                 disabled={createTx.status === 'success'}
                 style={inputStyle}

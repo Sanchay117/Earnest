@@ -8,7 +8,9 @@ import { readDeployment, type EvidenceEntry } from "./record.ts";
 const out: string[] = [
   "# Evidence",
   "",
-  "Every transaction the demo scripts sent, generated from `evidence/<network>.json` by `node scripts/evidence.ts`.",
+  "Every transaction of the demo, generated from `evidence/<network>.json` by `node scripts/evidence.ts`. Most were",
+  "sent by the demo scripts; rows marked (live app) were sent from a browser wallet through the live app, and",
+  "recorded with `node scripts/record-tx.ts`.",
   "Costs are gas paid in USDC (Arc's native gas token). A row marked REVERTED is an attack that was sent for real",
   "and refused by the contract on chain.",
   "",

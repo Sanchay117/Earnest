@@ -295,5 +295,71 @@
     "gasUsed": "68682",
     "costUsdc": "0.001508",
     "at": "2026-10-24T14:55:38.212Z"
+  },
+  {
+    "step": "fund agent (wallet)",
+    "outcome": "sent $0.01 for gas",
+    "from": "0x75ecc1d69ca9e7660b9afc36b141f774a103c438",
+    "hash": "0xe374f47a3d6c62b7491845c97826884055edd1bb8bed6869ce0c92ffe455ba34",
+    "link": "https://explorer.arc.io/tx/0xe374f47a3d6c62b7491845c97826884055edd1bb8bed6869ce0c92ffe455ba34",
+    "block": "27681226",
+    "gasUsed": "21000",
+    "costUsdc": "0.000452",
+    "at": "2026-10-24T20:31:28.000Z"
+  },
+  {
+    "step": "create job (live app)",
+    "outcome": "agent job for $0.050001, outside client",
+    "from": "0x75ecc1d69ca9e7660b9afc36b141f774a103c438",
+    "hash": "0xc680429b6e8cbb79730323187c6363c967782b62bd03d14d36eaa22bd8caf803",
+    "link": "https://explorer.arc.io/tx/0xc680429b6e8cbb79730323187c6363c967782b62bd03d14d36eaa22bd8caf803",
+    "block": "27681402",
+    "gasUsed": "320296",
+    "costUsdc": "0.006886",
+    "at": "2026-10-24T20:32:58.000Z"
+  },
+  {
+    "step": "approve (live app)",
+    "outcome": "approved $0.050001",
+    "from": "0x75ecc1d69ca9e7660b9afc36b141f774a103c438",
+    "hash": "0x097d09f6e89303e6ac1432c122c444e49d1c0d76016998aee9e5c87dab58a291",
+    "link": "https://explorer.arc.io/tx/0x097d09f6e89303e6ac1432c122c444e49d1c0d76016998aee9e5c87dab58a291",
+    "block": "27681451",
+    "gasUsed": "55426",
+    "costUsdc": "0.001229",
+    "at": "2026-10-24T20:33:22.000Z"
+  },
+  {
+    "step": "fund job 5 (live app)",
+    "outcome": "escrowed $0.050001",
+    "from": "0x75ecc1d69ca9e7660b9afc36b141f774a103c438",
+    "hash": "0x4010415f7e458efa1760bb35ac3fbd0e4d6893f853a3601d5387fecf44d182a4",
+    "link": "https://explorer.arc.io/tx/0x4010415f7e458efa1760bb35ac3fbd0e4d6893f853a3601d5387fecf44d182a4",
+    "block": "27681711",
+    "gasUsed": "89188",
+    "costUsdc": "0.001918",
+    "at": "2026-10-24T20:35:34.000Z"
+  },
+  {
+    "step": "submit job 5",
+    "outcome": "submitted digest",
+    "from": "0xdef34955c1e9081b2965aff9973fe67b932cc9e4",
+    "hash": "0x96b37940f9106583d099e01424e104cebf16d1c3fbb0ba0b9d9b70683f37c5aa",
+    "link": "https://explorer.arc.io/tx/0x96b37940f9106583d099e01424e104cebf16d1c3fbb0ba0b9d9b70683f37c5aa",
+    "block": "27681926",
+    "gasUsed": "56095",
+    "costUsdc": "0.001123",
+    "at": "2026-10-24T20:37:24.697Z"
+  },
+  {
+    "step": "complete job 5 (live app)",
+    "outcome": "digest verified, paid, rated 100",
+    "from": "0x75ecc1d69ca9e7660b9afc36b141f774a103c438",
+    "hash": "0xc7d01ba78ee8b625d488019ef252a9eb94569b52905af958ea12b29c510959a7",
+    "link": "https://explorer.arc.io/tx/0xc7d01ba78ee8b625d488019ef252a9eb94569b52905af958ea12b29c510959a7",
+    "block": "27682337",
+    "gasUsed": "217698",
+    "costUsdc": "0.004681",
+    "at": "2026-10-24T20:40:52.000Z"
   }
 ]

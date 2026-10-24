@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fb8ff"/>
+      <stop offset="0.5" stop-color="#5ee6ff"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1633"/>
+      <stop offset="1" stop-color="#040a17"/>
+    </linearGradient>
+    <radialGradient id="glowBlue" cx="0.2" cy="0.15" r="0.75">
+      <stop offset="0" stop-color="#1d4ed8" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1d4ed8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowViolet" cx="0.9" cy="0.95" r="0.65">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glowBlue)"/>
+  <rect width="1024" height="1024" fill="url(#glowViolet)"/>
+
+  <!-- Coin: a thick rim and a dotted inner edge -->
+  <circle cx="512" cy="512" r="350" fill="#5ee6ff" fill-opacity="0.05" stroke="url(#brand)" stroke-width="48"/>
+  <circle cx="512" cy="512" r="292" fill="none" stroke="url(#brand)" stroke-opacity="0.5" stroke-width="10"
+    stroke-linecap="round" stroke-dasharray="0.1 30.5"/>
+
+  <!-- Rating star, with a soft glow behind it -->
+  <polygon points="512.0,326.0 566.1,447.6 698.4,461.4 599.5,550.4 627.2,680.6 512.0,614.0 396.8,680.6 424.5,550.4 325.6,461.4 457.9,447.6" fill="#5ee6ff" opacity="0.45" filter="url(#soft)"/>
+  <polygon points="512.0,326.0 566.1,447.6 698.4,461.4 599.5,550.4 627.2,680.6 512.0,614.0 396.8,680.6 424.5,550.4 325.6,461.4 457.9,447.6" fill="url(#brand)" stroke="url(#brand)" stroke-width="30" stroke-linejoin="round"/>
+</svg>

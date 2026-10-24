@@ -14,7 +14,7 @@ This is the **project memory** - what Arc Studio remembers about building this a
 | Earnest v3, testnet rehearsal (scripts/demo.ts) | Arc Testnet (5042002) | `0x125e29bcc055d87fdaa6710c0b1596389bee781a` | `0x2d0dbdee861d3508feb74abe5312f56a97e39f713fa1f4568a3832c0b44ae98f` |
 | **Earnest v3 (live)** | **Arc Mainnet (5042)** | **`0xea257f34207afd7c1dd16ea64764dbdc6ee7abc3`** | `0xba96a1ed0d84a41e5b1e8653d465810d1780d11a1a031cba7f56e6dc9ee1ad66` |
 
-Mainnet demo agent: ERC-8004 agent #2730 ("Arc Block Digest"). Demo jobs 1 to 4, all transactions in `../docs/EVIDENCE.md`.
+Mainnet demo agent: ERC-8004 agent #2730 ("Arc Block Digest"). Demo jobs 1 to 4 from `scripts/demo.ts`, job 5 hired through the live app; all transactions in `../docs/EVIDENCE.md`.
 
 ### Constructor args (Arc Testnet)
 - USDC: `0x3600000000000000000000000000000000000000`

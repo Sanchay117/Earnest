@@ -1,6 +1,8 @@
 # Evidence
 
-Every transaction the demo scripts sent, generated from `evidence/<network>.json` by `node scripts/evidence.ts`.
+Every transaction of the demo, generated from `evidence/<network>.json` by `node scripts/evidence.ts`. Most were
+sent by the demo scripts; rows marked (live app) were sent from a browser wallet through the live app, and
+recorded with `node scripts/record-tx.ts`.
 Costs are gas paid in USDC (Arc's native gas token). A row marked REVERTED is an attack that was sent for real
 and refused by the contract on chain.
 
@@ -8,7 +10,7 @@ and refused by the contract on chain.
 
 - Earnest: [`0xea257f34207afd7c1dd16ea64764dbdc6ee7abc3`](https://explorer.arc.io/address/0xea257f34207afd7c1dd16ea64764dbdc6ee7abc3)
 - Demo agent: ERC-8004 agent id 2730 ("Arc Block Digest")
-- 27 transactions, $0.1195 of gas in total
+- 33 transactions, $0.1358 of gas in total
 
 | # | Step | Outcome | Transaction | Gas | Cost |
 |---:|---|---|---|---:|---:|
@@ -39,6 +41,12 @@ and refused by the contract on chain.
 | 25 | fake review | unpaid 100/100 review written directly to the registry | [`0x81f8f40f…`](https://explorer.arc.io/tx/0x81f8f40fec6b4f22cbabe7311be582940642724a2d098eeb2c996d1f772af8b9) | 108508 | $0.002182 |
 | 26 | fake review | unpaid 100/100 review written directly to the registry | [`0x203d1c37…`](https://explorer.arc.io/tx/0x203d1c37d70619ae7e6c568213681c65328230bf20fc9540c90f3e6bad23a02c) | 108508 | $0.002184 |
 | 27 | refund job 2 | expired, budget returned to client | [`0x9f786e37…`](https://explorer.arc.io/tx/0x9f786e37d2191901694cdb1b91048a1e1c3661497a2ca9e8637de62d4f80db63) | 68682 | $0.001508 |
+| 28 | fund agent (wallet) | sent $0.01 for gas | [`0xe374f47a…`](https://explorer.arc.io/tx/0xe374f47a3d6c62b7491845c97826884055edd1bb8bed6869ce0c92ffe455ba34) | 21000 | $0.000452 |
+| 29 | create job (live app) | agent job for $0.050001, outside client | [`0xc680429b…`](https://explorer.arc.io/tx/0xc680429b6e8cbb79730323187c6363c967782b62bd03d14d36eaa22bd8caf803) | 320296 | $0.006886 |
+| 30 | approve (live app) | approved $0.050001 | [`0x097d09f6…`](https://explorer.arc.io/tx/0x097d09f6e89303e6ac1432c122c444e49d1c0d76016998aee9e5c87dab58a291) | 55426 | $0.001229 |
+| 31 | fund job 5 (live app) | escrowed $0.050001 | [`0x4010415f…`](https://explorer.arc.io/tx/0x4010415f7e458efa1760bb35ac3fbd0e4d6893f853a3601d5387fecf44d182a4) | 89188 | $0.001918 |
+| 32 | submit job 5 | submitted digest | [`0x96b37940…`](https://explorer.arc.io/tx/0x96b37940f9106583d099e01424e104cebf16d1c3fbb0ba0b9d9b70683f37c5aa) | 56095 | $0.001123 |
+| 33 | complete job 5 (live app) | digest verified, paid, rated 100 | [`0xc7d01ba7…`](https://explorer.arc.io/tx/0xc7d01ba78ee8b625d488019ef252a9eb94569b52905af958ea12b29c510959a7) | 217698 | $0.004681 |
 
 ## Arc Testnet
 

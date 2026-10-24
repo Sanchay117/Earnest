@@ -66,7 +66,9 @@ client                         Earnest (ERC-8183 escrow)                  agent 
 ## What happened on Arc mainnet
 
 One run of [`scripts/mainnet-run.sh`](scripts/mainnet-run.sh): 27 transactions, real USDC, $0.1195 of gas in
-total. Each line links to the transaction on explorer.arc.io; the full log is in [docs/EVIDENCE.md](docs/EVIDENCE.md).
+total. Then one hire through the live app, from a browser wallet outside the demo (job 5): 6 more transactions,
+33 in all and $0.1358 of gas. Each line links to the transaction on explorer.arc.io; the full log is in
+[docs/EVIDENCE.md](docs/EVIDENCE.md).
 
 | What happened | Transaction |
 |---|---|
@@ -78,15 +80,18 @@ total. Each line links to the transaction on explorer.arc.io; the full log is in
 | Job 3: wrong digest submitted, rejected, $0.25 refunded to the client | [`0xe8f1b03f…`](https://explorer.arc.io/tx/0xe8f1b03f750763457784104ef952087552c2dc754adaa6df63eb23ad02387bf6) |
 | Job 4: the agent's owner, as evaluator, tries to rate its own agent: fails on chain with `SelfReview` | [`0x8c156537…`](https://explorer.arc.io/tx/0x8c1565373bf58da7d2ba2030889ca3397db894a4ee3d20cc2f598a5166aee820) |
 | A stranger gives the agent a free 100/100 straight in the registry (3 times) | [`0x6ccd3305…`](https://explorer.arc.io/tx/0x6ccd33050f3e589f081c6fa78539462cf8e317d553f5ffcf6242a14f2321a5d7) |
+| Job 5, hired through the live app by an outside wallet: $0.05 escrowed | [`0x4010415f…`](https://explorer.arc.io/tx/0x4010415f7e458efa1760bb35ac3fbd0e4d6893f853a3601d5387fecf44d182a4) |
+| Job 5: completed in the live app, agent paid $0.0495, treasury $0.0005, review 100 written by Earnest | [`0xc7d01ba7…`](https://explorer.arc.io/tx/0xc7d01ba78ee8b625d488019ef252a9eb94569b52905af958ea12b29c510959a7) |
 
 The result, read from the ERC-8004 Reputation Registry on mainnet:
 
 | | Reviews | Average | Backed by payment |
 |---|---:|---:|---:|
-| All reviews | 4 | 100 | 1 of 4 |
-| Earnest-verified (`getSummary(2730, [earnest], "earnest", "")`) | 1 | 100 | $0.50 |
+| All reviews | 5 | 100 | 2 of 5 |
+| Earnest-verified (`getSummary(2730, [earnest], "earnest", "")`) | 2 | 100 | $0.55 |
 
-Three of the four reviews cost nothing to write. Earnest's one review cost a real $0.50 job. Job 4 stays open
+Three of the five reviews cost nothing to write. Earnest's two reviews each cost a real job: $0.50 from the demo's
+client agent, and $0.05 from a wallet that hired the agent through the live app. Job 4 stays open
 with $0.10 in escrow until Oct 31, 2026 so the app's "Try to Cheat" page can attack a live job; after its deadline
 anyone can return the $0.10 to the client with `claimRefund`.
 
