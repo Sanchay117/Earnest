@@ -12,7 +12,8 @@ Arc Microgrants: Built with Arc Studio.
 
 | | |
 |---|---|
-| Live app | PENDING |
+| Live app | https://sanchay117.github.io/Earnest/ (reads Arc mainnet; add `?network=testnet` for the rehearsal) |
+| Source | https://github.com/Sanchay117/Earnest |
 | Arc Studio project | https://studio.arc.io/app/9c93cd2e-1a3a-4579-8441-e74ba5deaec3 |
 | Earnest on Arc Mainnet | [`0xea257f34207afd7c1dd16ea64764dbdc6ee7abc3`](https://explorer.arc.io/address/0xea257f34207afd7c1dd16ea64764dbdc6ee7abc3) |
 | Example tx: a paid job writes its review | [`0x3b22f2d8…`](https://explorer.arc.io/tx/0x3b22f2d84cc523ffdcc9520fa9c84f7cdbb60a33de19b7cb8192ada9f06cab36) |
