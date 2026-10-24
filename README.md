@@ -115,9 +115,13 @@ Studio CLI (`arc-studio run`), with the prompts kept in [`spec/`](spec/):
 3. [`prompt-3-app.md`](spec/prompt-3-app.md): Arc Studio closed one more hole we found (an evaluator could send
    just too little gas so the review silently failed) and built the web app in `app/src`.
 
-`app/` is the Arc Studio project as pulled with `arc-studio pull`, plus a few fixes we made by hand after pulling
-it: the app's `readAllFeedback` ABI now matches the live registry, "Try to Cheat" sends each attack from the
-address that would really try it and decodes the real revert, and the app points at our deployments.
+4. [`prompt-4-sync.md`](spec/prompt-4-sync.md): after the mainnet run, the fixes we made by hand were sent back
+   to Arc Studio, which rebuilt the app and reran the tests: the reviews list now reads the live registry's
+   `readAllFeedback`, "Try to Cheat" sends each attack from the address that would really try it and decodes the
+   real revert, and the app points at our deployments.
+
+`app/` is the Arc Studio project as pulled with `arc-studio pull`, and it matches the Arc Studio project file for
+file.
 
 The scripts in `scripts/` are ours. Arc Studio deploys to testnets only and never signs mainnet transactions, so
 we rehearsed the whole demo on Arc Testnet first (Earnest
