@@ -87,7 +87,7 @@ function buildAttacks(cfg: NetworkConfig): Attack[] {
       expectedError: 'NotExpired',
       skipReason: needs(demoJobs.live, 'live'),
       precheck: liveDeadlinePassed,
-      prepare: async () => ({
+      prepare: () => Promise.resolve({
         from: STRANGER, fromLabel: 'a stranger',
         data: encodeFunctionData({ abi: EARNEST_ABI, functionName: 'claimRefund', args: [BigInt(demoJobs.live)] }),
       }),
@@ -127,7 +127,7 @@ function buildAttacks(cfg: NetworkConfig): Attack[] {
       expectedError: 'Unauthorized',
       skipReason: needs(demoJobs.live, 'live'),
       precheck: liveJobGone,
-      prepare: async () => ({
+      prepare: () => Promise.resolve({
         from: STRANGER, fromLabel: 'a stranger',
         data: encodeFunctionData({
           abi: EARNEST_ABI, functionName: 'complete', args: [BigInt(demoJobs.live), ZERO_BYTES32, '0x'],
@@ -153,7 +153,7 @@ function buildAttacks(cfg: NetworkConfig): Attack[] {
       description: `claimRefund on completed job #${demoJobs.completed}`,
       expectedError: 'WrongStatus',
       skipReason: needs(demoJobs.completed, 'completed'),
-      prepare: async () => ({
+      prepare: () => Promise.resolve({
         from: STRANGER, fromLabel: 'a stranger',
         data: encodeFunctionData({ abi: EARNEST_ABI, functionName: 'claimRefund', args: [BigInt(demoJobs.completed)] }),
       }),
@@ -164,7 +164,7 @@ function buildAttacks(cfg: NetworkConfig): Attack[] {
       description: 'createAgentJob for agent id 2^64',
       expectedError: 'UnknownAgent',
       skipReason: notDeployed ? 'Not deployed on this network' : undefined,
-      prepare: async () => ({
+      prepare: () => Promise.resolve({
         from: STRANGER, fromLabel: 'a stranger',
         data: encodeFunctionData({
           abi: EARNEST_ABI, functionName: 'createAgentJob',
@@ -178,7 +178,7 @@ function buildAttacks(cfg: NetworkConfig): Attack[] {
       description: 'createJob with a deadline 60 seconds away',
       expectedError: 'ExpiryTooShort',
       skipReason: notDeployed ? 'Not deployed on this network' : undefined,
-      prepare: async () => ({
+      prepare: () => Promise.resolve({
         from: STRANGER, fromLabel: 'a stranger',
         data: encodeFunctionData({
           abi: EARNEST_ABI, functionName: 'createJob', args: [STRANGER, STRANGER, inSeconds(60), 'test', ZERO_ADDR],
@@ -191,7 +191,7 @@ function buildAttacks(cfg: NetworkConfig): Attack[] {
       description: 'createJob with hook 0x...dEaD',
       expectedError: 'HookNotSupported',
       skipReason: notDeployed ? 'Not deployed on this network' : undefined,
-      prepare: async () => ({
+      prepare: () => Promise.resolve({
         from: STRANGER, fromLabel: 'a stranger',
         data: encodeFunctionData({
           abi: EARNEST_ABI, functionName: 'createJob', args: [STRANGER, STRANGER, inSeconds(3600), 'test', DEAD],
