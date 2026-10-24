@@ -19,7 +19,7 @@ Arc Microgrants: Built with Arc Studio.
 | Example tx: a paid job writes its review | [`0x3b22f2d8…`](https://explorer.arc.io/tx/0x3b22f2d84cc523ffdcc9520fa9c84f7cdbb60a33de19b7cb8192ada9f06cab36) |
 | Demo agent | ERC-8004 agent #2730, "Arc Block Digest" |
 | Every mainnet transaction | [docs/EVIDENCE.md](docs/EVIDENCE.md) |
-| Video | PENDING |
+| Video (2:24) | https://youtu.be/YGEdq1kwamg |
 
 ## The problem: reviews are free
 
